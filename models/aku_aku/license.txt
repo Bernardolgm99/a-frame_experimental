@@ -1,0 +1,11 @@
+Model Information:
+* title:	Aku Aku
+* source:	https://sketchfab.com/3d-models/aku-aku-e126fbdc76b44d1b8d6d53cac7b6939e
+* author:	danielsive (https://sketchfab.com/danielsive)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Aku Aku" (https://sketchfab.com/3d-models/aku-aku-e126fbdc76b44d1b8d6d53cac7b6939e) by danielsive (https://sketchfab.com/danielsive) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
