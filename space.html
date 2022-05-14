@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Space</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="./dist/aframe-portals.js"></script>
+</head>
+
+<body>
+    <a-scene stats>
+        <a-assets>
+            <a-asset-item id="table" src="/models/side_table/scene.gltf"></a-asset-item>
+            <a-asset-item id="phone" src="/models/phone/scene.gltf"></a-asset-item>
+            <a-asset-item id="couch" src="/models/couch/scene.gltf"></a-asset-item>
+            <a-asset-item id="television" src="/models/television/scene.gltf"></a-asset-item>
+            <a-asset-item id="lamp" src="/models/lamp/scene.gltf"></a-asset-item>
+            <img id="sky" src="/img/sky.jpg">
+            <video id="movie" autoplay loop="true" src="/img/movie.mp4">
+        </a-assets>
+
+        <!--Camera-->
+        <a-entity position="0 0 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation=""
+            data-aframe-inspector-original-camera="">
+            <a-cursor position="0 0 -0.05" scale="0.04 0.04 1" material="" raycaster="far: 1; objects: .clickable"
+                cursor="" geometry="">
+            </a-cursor>
+        </a-entity>
+
+        <!-- Ambient Light -->
+        <a-entity id="luz-ambiente" light="type: ambient; intensity: 0.5; color: #B9A89A"></a-entity>
+
+        <!-- Can be a bad idea -->
+        <a-sky rotation="60 0 0" animation="property: rotation; to: 0 360 360; loop: true; easing: linear; dur: 500000"
+            src="#sky"></a-sky>
+
+        <!-- Couch -->
+        <a-entity gltf-model="#couch" scale="0.01 0.01 0.01" position="0 -1 1" rotation="0 180 0"></a-entity>
+
+        <!-- Television -->
+        <a-entity position="0 -0.5 -3"
+            animation="property: rotation; to: 0 -360 -360; loop: true; easing: linear; dur: 50000">
+            <a-entity gltf-model="#television" scale="0.1 0.1 0.1" rotation="0 0 0"></a-entity>
+            <a-video src="#movie" width="16" height="9" position="-0.125 0.55 0.34" material="" geometry=""
+                scale="0.063 0.095 1"></a-video>
+        </a-entity>
+
+        <!-- Lamp -->
+        <a-entity position="2.5 -0.5 1"
+            animation="property: rotation; to: 0 360 360; loop: true; easing: linear; dur: 50000">
+            <a-entity position="0 -0.5 0">
+                <a-entity gltf-model="#lamp" scale="" position="0 0 0" rotation="0 180 0"></a-entity>
+                <a-entity geometry="primitive: sphere" material="color: #ffffe0; shader: flat"
+                    light="type: point; distance: 9; intensity: 5; color: #ffffe0" scale="0.02 0.02 0.02"
+                    position="-0.04526 1.6 -0.04238"></a-entity>
+                <a-entity
+                    light="type: spot; color: #ffffff; groundColor: #ffffff; intensity: 5; distance: 1.5; penumbra: 1; angle: 20"
+                    position="-0.04 0.32195 -0.04" rotation="90 0 0"></a-entity>
+                <a-entity
+                    light="type: spot; color: #ffffff; groundColor: #ffffff; intensity: 30; distance: 0.67; penumbra: 1; angle: 30"
+                    position="-0.0475 1.77471 0.4599" rotation="-29.999999999999996 0 0"></a-entity>
+                <a-entity
+                    light="type: spot; color: #ffffff; groundColor: #ffffff; intensity: 30; distance: 0.67; penumbra: 1; angle: 30"
+                    position="0.50381 1.775 -0.02462" rotation="-29.999999999999996 90 0"></a-entity>
+                <a-entity
+                    light="type: spot; color: #ffffff; groundColor: #ffffff; intensity: 30; distance: 0.67; penumbra: 1; angle: 30"
+                    position="-0.07209 1.775 -0.58442" rotation="-29.999999999999996 180 0"></a-entity>
+                <a-entity
+                    light="type: spot; color: #ffffff; groundColor: #ffffff; intensity: 30; distance: 0.67; penumbra: 1; angle: 30"
+                    position="-0.54267 1.77471 -0.03416" rotation="-29.999999999999996 270 0"></a-entity>
+            </a-entity>
+        </a-entity>
+
+        <!-- Phone -->
+        <a-entity position="-2 -0.4 0.5" rotation="0 -60 0">
+            <a-entity class="clickable" link="href:menu.html" gltf-model="/models/phone/scene.gltf"
+                scale="0.01 0.01 0.01"></a-entity>
+            <a-entity gltf-model="/models/side_table/scene.gltf" scale="13 10 10" position="-3.051 -0.723 3.66409"
+                rotation="0 90 0"></a-entity>
+        </a-entity>
+    </a-scene>
+</body>
+
+</html>

@@ -13,14 +13,19 @@
             <a-asset-item id="mask" src="/models/aku_aku/scene.gltf"></a-asset-item>
             <a-asset-item id="table" src="/models/side_table/scene.gltf"></a-asset-item>
             <a-asset-item id="phone" src="/models/phone/scene.gltf"></a-asset-item>
-            <img id="wall" src="/texture/wall.jpg">
+            <a-asset-item id="frame" src="/models/frame/scene.gltf"></a-asset-item>
+            <img id="wall" src="/texture/wall2.jpg">
             <img id="wall_normal" src="/texture/wall_normal.jpg">
             <img id="floor" src="/texture/floor.jpg">
+            <img id="ceiling" src="/texture/ceiling.jpg">
+            <img id="img_backroom" src="/img/backroom.png">
+            <img id="img_space" src="/img/space.jpg">
+            <img id="img_backroom" src="/img/backroom.png">
         </a-assets>
         <a-entity light="type: ambient; color: #EEE; intensity: 0.8" position="-1 1 0"></a-entity>
 
         <!--Camera-->
-        <a-entity position="0 0 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation=""
+        <a-entity position="0 0 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation="0 0 0"
             data-aframe-inspector-original-camera="" cursor="rayOrigin: mouse">
             <a-cursor position="0 0 -0.05" scale="0.04 0.04 1" material="" raycaster="far: 2; objects: .clickable"
                 cursor="" geometry="">
@@ -29,13 +34,45 @@
 
         <!-- Room -->
         <a-entity position="">
-            <a-plane material="src: #wall; repeat: 2 1; normalMap: #wall_normal" geometry="" position="-3 0 0" rotation="0 90 0" scale="6 2 1"></a-plane>
-            <a-plane material="src: #wall; repeat: 2 1; normalMap: #wall_normal" geometry="" position="3 0 0" rotation="0 -90 0" scale="6 2 1"></a-plane>
-            <a-plane material="src: #wall; repeat: 2 1; normalMap: #wall_normal" geometry="" position="0 0 -3" scale="6 2 1"></a-plane>
-            <a-plane material="src: #wall; repeat: 2 1; normalMap: #wall_normal" geometry="" position="0 0 3" rotation="0 180 0" scale="6 2 1"></a-plane>
-            <a-plane material="src: #floor; repeat: 6 6" geometry="" rotation="-90 0 0" position="0 -1 0" scale="6 6 1"></a-plane>
-            <a-plane material="" geometry="" scale="6 6 1" rotation="90 0 0" position="0 1 0"></a-plane>
+            <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 0 0" position="-2.95 0 0"></a-entity>
+            <a-plane link="href:illusion\index.html" material="src: #img_backroom" geometry="" rotation="0 90 0"
+                position="-2.95 0 0" scale="1.5 1.15 1"></a-plane>
+            <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 -90 0" position="0 0 -2.95"></a-entity>
+            <a-plane link="href:space.html" material="src: #img_space" geometry="" rotation="0 0 0" position="0 0 -2.95"
+                scale="1.5 1.15 1"></a-plane>
+            <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 180 0" position="2.95 0 0"></a-entity>
+            <a-plane link="href:illusion\index.html" material="src: #img_backroom" geometry="" rotation="0 -90 0"
+                position="2.95 0 0" scale="1.5 1.15 1"></a-plane>
+            <a-plane material="src: #wall; repeat: 4 2; normalMap: #wall_normal" geometry="" position="-3 0 0"
+                rotation="0 90 0" scale="6 2 1"></a-plane>
+            <a-plane material="src: #wall; repeat: 4 2; normalMap: #wall_normal" geometry="" position="3 0 0"
+                rotation="0 -90 0" scale="6 2 1"></a-plane>
+            <a-plane material="src: #wall; repeat: 4 2; normalMap: #wall_normal" geometry="" position="0 0 -3"
+                scale="6 2 1"></a-plane>
+            <a-plane material="src: #wall; repeat: 4 2; normalMap: #wall_normal" geometry="" position="0 0 3"
+                rotation="0 180 0" scale="6 2 1"></a-plane>
+            <a-plane material="src: #floor; repeat: 6 6" geometry="" rotation="-90 0 0" position="0 -1 0" scale="6 6 1">
+            </a-plane>
+            <a-plane material="src: #ceiling" geometry="" scale="6 6 1" rotation="90 0 0" position="0 1 0"></a-plane>
         </a-entity>
+
+        <!-- Phone -->
+        <a-entity position="-2.11981 -0.4 2.29229" rotation="0 -45 0">
+            <a-entity text="value: EXIT HERE; color: #ffffff; wrapCount: 10" rotation="0 180 0"
+                position="-0.172 0.355 0.15"></a-entity>
+            <a-entity class="clickable" link="href: menu.html" gltf-model="/models/phone/scene.gltf"
+                scale="0.01 0.01 0.01"></a-entity>
+            <a-entity gltf-model="/models/side_table/scene.gltf" scale="13 10 10" position="-3.051 -0.723 3.66409"
+                rotation="0 90 0"></a-entity>
+        </a-entity>
+
+        <!-- Credit -->
+        <a-entity
+            text="value: <PROJETO CPM> Bernardo Macedo Eduardo Alves Gaspar Nariz; color: #ffffff; wrapCount: 15; lineHeight: 100"
+            rotation="0 180 0" position="-0.5 0 3" scale=""></a-entity>
+        <a-entity
+            text="value: <References> https://aframe.io/blog/aframe-v1.1.0/ https://github.com/ryota-mitarai/aframe-portals ; color: #ffffff; lineHeight: 100"
+            rotation="0 180 0" position="1.5 0 3" scale="1.5 1.5 1.5"></a-entity>
     </a-scene>
 </body>
 

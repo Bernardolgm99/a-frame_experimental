@@ -1,0 +1,11 @@
+Model Information:
+* title:	Vieille Lampe | Old lamp
+* source:	https://sketchfab.com/3d-models/vieille-lampe-old-lamp-55f424ba36014bc0822e45bb1b5a8d44
+* author:	Audrey Langlois (https://sketchfab.com/AudreyLanglois)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Vieille Lampe | Old lamp" (https://sketchfab.com/3d-models/vieille-lampe-old-lamp-55f424ba36014bc0822e45bb1b5a8d44) by Audrey Langlois (https://sketchfab.com/AudreyLanglois) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
