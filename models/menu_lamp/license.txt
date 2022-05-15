@@ -1,0 +1,11 @@
+Model Information:
+* title:	Industrial Lamp
+* source:	https://sketchfab.com/3d-models/industrial-lamp-78f8be83ca8d40b18d5ff2dd843229fa
+* author:	noodlepirate (https://sketchfab.com/noodlepirate)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Industrial Lamp" (https://sketchfab.com/3d-models/industrial-lamp-78f8be83ca8d40b18d5ff2dd843229fa) by noodlepirate (https://sketchfab.com/noodlepirate) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
