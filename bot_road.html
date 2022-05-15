@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <title>Yau</title>
+</head>
+<body>
+    <a-scene stats>
+        <a-assets>
+            <img id="sky" src="/img/sky.jpg">
+            <img src="/a-frame_experimental/texture/road_texture/Asphalt_Rough_vizhdcz_8K_surface_ms/vizhdcz_8K_Albedo.jpg" id="road">
+            <a-asset-item src="/a-frame_experimental/models/door/scene.gltf" id="door"></a-asset-item>
+            <a-asset-item src="/a-frame_experimental/models/recent_door/scene.gltf" id="side_door"></a-asset-item>
+            <a-asset-item src="/a-frame_experimental/models/side_table/scene.gltf" id="table"></a-asset-item>
+            <a-asset-item src="/a-frame_experimental/models/jukebox/scene.gltf" id="jukebox"></a-asset-item>
+        </a-assets>
+
+        <!--FLOOR-->
+        <a-plane
+        width="45"
+        height="15"
+        depth="30"
+        color="#FFFFFF"
+        position="0 0 0"
+        rotation="-90 90 0"
+        material="src:#road; repeat: 12 10"></a-plane>
+
+        <!--SKY-->
+        <a-sky
+        src="#sky"></a-sky>
+
+        <!--LIGHT SOURCE-->
+        <a-entity light="type: spot; color: #880202; intensity: 0.81; penumbra: 1" position="0 2.27763 -26.152" rotation="-180 0 0"></a-entity>
+
+        <a-entity light="type: spot; color: #880202; intensity: 0.81; penumbra: 1" position="0 3.23998 -22.37481" rotation="-88.53687625038559 0 0"></a-entity>
+
+        <a-entity light="type: point; color: #880202; intensity: 0.81; penumbra: 1" position="0 3.23998 -16.258" rotation="-88.53687625038559 0 0"></a-entity>
+
+        <a-entity light="type: spot; color: #fffee0; groundColor: #ffffff; intensity: 0.15; penumbra: 1; castShadow: true;" rotation="-90 0 0" position="0 15.156 0"></a-entity>
+
+        
+        <!--AMBIENT LIGHT SOURCE-->
+        <!--<a-entity light="type: ambient;
+                        intensity: 0.500"></a-entity>-->
+        
+                        
+        <!--MAIN DOOR-->
+        <a-entity id="old_door" gltf-model="#door" position="0 2.105 -22.500" rotation="0 180 0" scale="0.01 0.01 0.002"></a-entity>
+
+        <!--SIDE DOORS LEFT-->
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 -5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 -10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 -15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 -20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
+        
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 0" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
+        
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="-7.59821 1.31846 20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <!--SIDE DOORS RIGHT-->
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 -5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity>
+        
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 -10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 -15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 -20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 0" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <a-entity id="recent_door" gltf-model="#side_door" position="7.59821 1.31846 20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+
+        <!--SIDE TABLE-->
+        <a-entity id="side_table" gltf-model="#table" position="-1.6926 -0.11068 -18.39653" rotation="0 90 0" scale="13 10 10"></a-entity>
+
+        <!--JUKEBOX-->
+        <a-entity id="jukebox_music" gltf-model="#jukebox" position="1.24539 1.04655 -22.11681" rotation="" scale="0.005 0.005 0.005"></a-entity>
+
+        <!--MUSIC-->
+        <a-sound src="/a-frame_experimental/sound/creepy_sound_1.mp3" autoplay="false" position="1.24539 1.04655 -22.11681"></a-sound>
+
+    </a-scene>
+</body>
+<script src="index.js"></script>
+</html>

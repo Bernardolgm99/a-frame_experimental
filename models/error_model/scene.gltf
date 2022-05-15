@@ -1,0 +1,165 @@
+{
+  "accessors": [
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1194,
+      "max": [
+        51.0,
+        -0.0,
+        1.0149999856948853
+      ],
+      "min": [
+        -38.481998443603516,
+        -50.0,
+        -12.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 14328,
+      "componentType": 5126,
+      "count": 1194,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 3264,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Mr. Snark (https://sketchfab.com/im-an-idiot)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/half-life-2-errormdl-recreation-c62b8d197dde404cbeb3d5b63390e4f5",
+      "title": "Half-Life 2 error.mdl recreation"
+    },
+    "generator": "Sketchfab-12.66.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 13056,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 28656,
+      "byteOffset": 13056,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 41712,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_clearcoat"
+  ],
+  "materials": [
+    {
+      "emissiveFactor": [
+        0.41899176759539886,
+        0.0,
+        0.0
+      ],
+      "extensions": {
+        "KHR_materials_clearcoat": {
+          "clearcoatFactor": 1.0,
+          "clearcoatRoughnessFactor": 0.0
+        }
+      },
+      "name": "color_15277357",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          1.0,
+          0.0,
+          0.01854460090541003,
+          1.0
+        ],
+        "metallicFactor": 0.5,
+        "roughnessFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0
+          },
+          "indices": 2,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.02590874768793583,
+        -1.2444864561233713e-33,
+        4.166444328947337e-18,
+        0.0,
+        3.1934997116012273e-34,
+        -0.02590874768793583,
+        -1.1505795288940059e-17,
+        0.0,
+        4.166444328947337e-18,
+        1.1505795288940059e-17,
+        -0.02590874768793583,
+        0.0,
+        8.881784197001252e-16,
+        -30.49248313903809,
+        19.507493972778313,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "tinker.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ]
+}
