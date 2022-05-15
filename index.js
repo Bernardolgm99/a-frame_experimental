@@ -1,4 +1,3 @@
-
   AFRAME.registerComponent('move-click', {
     schema: {
       url: {default: ''}
