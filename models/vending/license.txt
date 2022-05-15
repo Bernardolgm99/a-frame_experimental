@@ -1,0 +1,11 @@
+Model Information:
+* title:	low poly vending machine
+* source:	https://sketchfab.com/3d-models/low-poly-vending-machine-2d48caa4801d45ee9d3e3d40bfbd558d
+* author:	thekillinggmoon (https://sketchfab.com/denizkarincaoglu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "low poly vending machine" (https://sketchfab.com/3d-models/low-poly-vending-machine-2d48caa4801d45ee9d3e3d40bfbd558d) by thekillinggmoon (https://sketchfab.com/denizkarincaoglu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

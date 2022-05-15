@@ -1,0 +1,398 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 1950,
+      "max": [
+        102.51988983154297,
+        59.649085998535156,
+        30.158143997192383
+      ],
+      "min": [
+        -102.53327178955078,
+        -0.4650559723377228,
+        -16.85211753845215
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 23400,
+      "componentType": 5126,
+      "count": 1950,
+      "max": [
+        0.9999477863311768,
+        0.9985945820808411,
+        0.9978293180465698
+      ],
+      "min": [
+        -0.9999477863311768,
+        -0.9982761144638062,
+        -0.9985511302947998
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 1950,
+      "max": [
+        0.9984747171401978,
+        0.5927591323852539,
+        0.9999995231628418,
+        1.0
+      ],
+      "min": [
+        -0.9987230896949768,
+        -0.8149465322494507,
+        -0.9999960660934448,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 1950,
+      "max": [
+        0.9924570918083191,
+        0.9890731573104858
+      ],
+      "min": [
+        0.03248739242553711,
+        0.010074973106384277
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 7632,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 46800,
+      "componentType": 5126,
+      "count": 608,
+      "max": [
+        99.25556182861328,
+        59.019134521484375,
+        24.454822540283203
+      ],
+      "min": [
+        -99.25556182861328,
+        23.913742065429688,
+        -16.375431060791016
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 54096,
+      "componentType": 5126,
+      "count": 608,
+      "max": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -1.0,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 31200,
+      "componentType": 5126,
+      "count": 608,
+      "max": [
+        0.07332119345664978,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.02522917091846466,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 15600,
+      "componentType": 5126,
+      "count": 608,
+      "max": [
+        0.9417639970779419,
+        1.0
+      ],
+      "min": [
+        0.0,
+        0.0
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 30528,
+      "componentType": 5125,
+      "count": 1140,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "RBG_illustrations (https://sketchfab.com/RBG_illustrations)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/park-bench-2ee2bc87756d4bf0932d83ab860ddb8f",
+      "title": "Park Bench"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 35088,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 20464,
+      "byteOffset": 35088,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 61392,
+      "byteOffset": 55552,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 40928,
+      "byteOffset": 116944,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 157872,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Bench_Metal_baseColor.png"
+    },
+    {
+      "uri": "textures/Bench_Metal_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Bench_Metal_normal.png"
+    },
+    {
+      "uri": "textures/Bench_Wood_baseColor.png"
+    },
+    {
+      "uri": "textures/Bench_Wood_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Bench_Wood_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Bench_Metal",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "Bench_Wood",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Bench_Bench_Metal_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3
+          },
+          "indices": 4,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Bench_Bench_Wood_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TANGENT": 7,
+            "TEXCOORD_0": 8
+          },
+          "indices": 9,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Park Bench.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "name": "Bench"
+    },
+    {
+      "mesh": 0,
+      "name": "Bench_Bench_Metal_0"
+    },
+    {
+      "mesh": 1,
+      "name": "Bench_Bench_Wood_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

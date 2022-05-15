@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>exemple3</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+</head>
+
+<body> <!---->
+  <a-scene stats>
+  <a-models>
+    <a-asset-item id="bench" src="/a-frame_experimental/models/park_bench/scene.gltf"></a-asset-item>
+    <a-asset-item id="vending" src="/a-frame_experimental/models/vending/scene.gltf"></a-asset-item>
+    <a-asset-item id="rail" src="/a-frame_experimental/models/rail/scene.gltf"></a-asset-item>
+    <a-asset-item id="train" src="/a-frame_experimental/models/train/electric.gltf"></a-asset-item>
+    <a-asset-item id="lamp" src="/a-frame_experimental/models/lamp_station/scene.gltf"></a-asset-item>
+    <a-asset-item id="beam" src="/a-frame_experimental/models/beam/scene.gltf"></a-asset-item>
+    <a-asset-item id="trash" src="/a-frame_experimental/models/trash_can/scene.gltf"></a-asset-item>
+    
+    <img id="graf" src="/a-frame_experimental/texture/graf.png">
+    <img id="ground" src="/a-frame_experimental/texture/concrete.jpg">
+    <img id="yellow" src="/a-frame_experimental/texture/yellow.jpg">
+    <img id="ceiling" src="/a-frame_experimental/texture/ceiling_station.jpg">
+    <img id="wall" src="/a-frame_experimental/texture/wall_station.jpg">
+    <img id="poster" src="/a-frame_experimental/texture/postermovie.jpg">
+    <img id="graf2" src="/a-frame_experimental/texture/graf2.png">
+    <img id="graf3" src="/a-frame_experimental/texture/graf3.png">
+    <img id="graf4" src="/a-frame_experimental/texture/graf4.png">
+    <img id="graf5" src="/a-frame_experimental/texture/graf5.png">
+    <img id="map" src="/a-frame_experimental/texture/map.png">
+  </a-models>
+    
+  <!-- Ambient Light -->
+  <a-entity id="luz-ambiente" light="type: ambient; intensity: 0.1; color: #000000"></a-entity>
+
+  <!-- Chão -->
+  <a-plane src="#ground" repeat="5 1" position="-0.4" rotation="-90 0 0" scale="30 8 10" roughness="1">
+  </a-plane>
+  <a-plane src="#yellow" repeat="25 1" position="-0.4 0.01 -4" rotation="-90 0 0" scale="30 0.5 10" roughness="1">
+  </a-plane>
+
+  <!-- Chão rail -->
+  <a-plane color="#333" position="0 -1.5 -8" rotation="-90 0 0" scale="30 8.7 10" roughness="1">
+  </a-plane>
+
+  <!--teto -->
+  <a-plane src="#ceiling" position='0 7 -4' rotation="90 0 0" scale="30 16.5 10" roughness="1">
+  </a-plane>
+
+  <!--paredes --> 
+  <!--fundo frente -->
+  <a-plane color="#000" position='0 2.75 -12.2' scale="30 8.5 10" roughness="1"></a-plane>
+
+  <!--fundo atrás-->
+  <a-plane src="#wall" repeat="3 15" position='0 3.5 4' rotation= '0 180 90' scale="7 30 10" roughness="1">
+  </a-plane>
+  <!--esquerda-->
+  <a-plane src="#000" repeat="3 15" position='-15 2.75 -4' rotation= '0 90 0' scale="16.5 8.8 10" roughness="1">
+  </a-plane>
+  <!--direita-->
+  <a-plane src="#000" repeat="3 15" position='15 2.75 -4' rotation= '0 -90 0' scale="16.5 8.8  10" roughness="1">
+  </a-plane> 
+
+  <!--Rail -->
+  <!--Rail -->
+  <a-entity gltf-model="#rail" rotation= '0 90 0' scale= '4 1 3' position="0 -1.5 -7.5"></a-entity>
+  <!--direita -->
+  <a-entity gltf-model="#rail" rotation= '0 90 0' scale= '4 1 3' position="9.85 -1.5 -7.5"></a-entity>
+  <!--esquerda-->
+  <a-entity gltf-model="#rail" rotation= '0 90 0' scale= '4 1 3' position="-9.85 -1.5 -7.5"></a-entity>
+
+  <!--train/train_sound-->
+  <a-entity 
+  gltf-model="#train" 
+  rotation= '0 90 0'
+  animation="property: position;
+  from: 700 -1.5 -7.5;
+  to: -700.85 -1.5 -7.5;
+  dur: 12500;
+  loop: true;
+  easing: linear"></a-entity>
+
+  <!--posts/beams -->
+  <a-entity position="-6 -1.5 1.5">
+    <a-entity geometry="primitive: cylinder" material="color: #ffffe0; shader: flat" light="type: point; distance: 9; intensity: 0.4; color:#ffffe0" scale="0.02 0.13 0.02" position="0 3.8 -1.80067"></a-entity>
+    <a-entity geometry="primitive: cylinder" material="color: #ffffe0; shader: flat" light="type: point; distance: 9; intensity: 0.4; color:#ffffe0" scale="0.02 0.13 0.02" position="0.3 3.8 -1.80067"></a-entity>
+    <a-entity gltf-model="#beam" rotation="0 90 90" scale="0.025 0.04 0.04" position="-0.35 8.5 -2.2"></a-entity>
+  </a-entity>
+  <a-entity position="6 -1.5 1.5">
+    <a-entity geometry="primitive: cylinder" material="color: #ffffe0; shader: flat" light="type: point; distance: 9; intensity: 0.4; color:#ffffe0" scale="0.02 0.13 0.02" position="0 3.8 -1.80067"></a-entity>
+    <a-entity 
+    geometry="primitive: cylinder" 
+    material="color: #ffffe0; shader: flat" 
+    light="type: point; distance: 9; intensity: 0.2; color:#ffffe0" 
+    animation="property: light.intensity; from: 0.2; to: 0.4; dur: 400; loop:true"
+    scale="0.02 0.13 0.02" 
+    position="-0.4 3.8 -1.80067"></a-entity>
+    <a-entity gltf-model="#beam" rotation="0 90 90" scale="0.025 0.04 0.04" position="-0.7 8.5 -2.2"></a-entity>
+  </a-entity>
+  <a-entity gltf-model="#beam" rotation="0 180 90" scale="0.025 0.045 0.02" position="-6.35 7.2 4.2"></a-entity>
+  <a-entity gltf-model="#beam" rotation="0 180 90" scale="0.025 0.045 0.02" position="5.25 7.2 4.2"></a-entity>
+  <a-entity gltf-model="#beam" rotation="90 90 90" scale="0.1 0.05 0.04" position="16.4 7.35 -0.79"></a-entity>
+  <a-entity gltf-model="#beam" rotation="90 90 90" scale="0.1 0.03 0.04" position="16.4 7.35 3.4"></a-entity>
+  <a-entity gltf-model="#beam" rotation="90 0 90" scale="0.1 0.06 0.04" position="-5.2 7.4 4.6"></a-entity>
+  <a-entity gltf-model="#beam" rotation="90 0 90" scale="0.1 0.06 0.04" position="6.4 7.4 4.6"></a-entity>
+
+  <!--light-->
+  <a-entity light="type: spot; angle: 25; distance: 0.5; intensity: 1.5" position="-5.2 2.3 -0.27" rotation="0 90 0"></a-entity>
+  <a-entity light="type: spot; angle: 25; distance: 0.5; intensity: 1.5" position="-6.47 2.3 -0.27" rotation="0 -90 0"></a-entity>
+  <a-entity light="type: spot; angle: 25; distance: 0.5; intensity: 1.5" position="6.43 2.3 -0.27" rotation="0 90 0"></a-entity>
+  <a-entity 
+  light="type: spot; angle: 25; distance: 0.5; intensity: 1.5" 
+  animation="property: light.intensity;from: 0.5; to: 1.5; dur: 400; loop:true"
+  position="5.2 2.3 -0.27" 
+  rotation="0 -90 0"></a-entity>
+
+  <!--LAMP-->
+  <a-entity gltf-model="#lamp" rotation="0 90 0" scale="0.01 0.025 0.02" position="-5.7 2.3 -0.278"></a-entity>
+  <a-entity gltf-model="#lamp" rotation="0 -90 0" scale="0.01 0.025 0.02" position="-6 2.3 -0.278"></a-entity>
+  <a-entity gltf-model="#lamp" rotation="0 -90 0" scale="0.01 0.025 0.02" position="5.7 2.3 -0.278"></a-entity>
+  <a-entity gltf-model="#lamp" rotation="0 90 0" scale="0.01 0.025 0.02" position="6 2.3 -0.278"></a-entity>
+
+  
+  <!--bench-->
+  <a-entity gltf-model="#bench" position="-8.5 0 3.55" rotation="0 180 0" scale="0.02 0.015 0.02"></a-entity>
+  <a-entity gltf-model="#bench" position="8.5 0 3.55" rotation="0 180 0" scale="0.02 0.015 0.02"></a-entity>
+  
+  <!--machine-->
+  <a-entity gltf-model="#vending" position="0.6 0.5 1" rotation="0 180 0" scale="0.7 0.6 0.8"></a-entity>
+
+  <!--trashcan-->
+  <a-entity gltf-model="#trash" position="3 0 3.5" scale="0.004 0.004 0.004"></a-entity>
+
+  <!--posters/ads-->
+  <a-plane src="#map" position='0.8 2.2 3.99' scale="2.3 1.5 1" rotation= '0 180 0' roughness="1"></a-plane>
+  <a-plane src="#poster" position='8.5 3.4 3.99' scale="2 2.5 1" rotation= '0 180 0' roughness="1"></a-plane>
+  <a-plane src="#graf" transparent="true" scale="1.3 0.5 1" position='7.2 1.4 3.99' rotation= '0 180 10' roughness="1"></a-plane>
+  <a-plane src="#graf2" transparent="true" scale="0.5 0.2 1" position='0.7 0.8 3.99' rotation= '0 180 -15' roughness="1"></a-plane>
+  <a-plane src="#graf5" transparent="true" scale="3.5 1.5 1" position='-3.3 1.57 3.99' rotation= '0 180 -8' roughness="1"></a-plane>
+  <a-plane src="#graf4" transparent="true" scale="2.5 2 1" position='-8.8 3.3 3.99' rotation= '0 180 10' roughness="1"></a-plane>
+
+  </a-scene>
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Bulkhead Lamp (Game Ready)
+* source:	https://sketchfab.com/3d-models/bulkhead-lamp-game-ready-c7ecba33758a46c78537c1c9e6161aeb
+* author:	andersonmat (https://sketchfab.com/umut2010)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Bulkhead Lamp (Game Ready)" (https://sketchfab.com/3d-models/bulkhead-lamp-game-ready-c7ecba33758a46c78537c1c9e6161aeb) by andersonmat (https://sketchfab.com/umut2010) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
