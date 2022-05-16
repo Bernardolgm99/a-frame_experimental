@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="/illusion/dist/aframe-portals.js"></script>
+    <!--<script src="/illusion/dist/aframe-portals.js"></script>-->
     <title>Yau</title>
 </head>
 <body>
@@ -26,7 +26,7 @@
 
         <!--Camera-->
         <a-entity position="0 1.7 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation="0 0 0"
-            data-aframe-inspector-original-camera="">
+            data-aframe-inspector-original-camera="" cursor="rayOrigin: mouse">
             <a-cursor position="0 0 -0.05" scale="0.04 0.04 1" material="" raycaster="far: 2; objects: .clickable"
                 cursor="" geometry="">
             </a-cursor>
@@ -62,7 +62,7 @@
         
                         
         <!--MAIN DOOR-->
-        <a-entity id="old_door" gltf-model="#door" position="0 2.51297 -22.5" rotation="0 180 0" scale="0.01 0.012 0.002"></a-entity>
+        <a-entity id="old_door" gltf-model="#door" position="0 2.51297 -22.5" rotation="0 180 0" scale="0.01 0.012 0.002" animate=""></a-entity>
 
         <!--SIDE DOORS LEFT-->
         <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
