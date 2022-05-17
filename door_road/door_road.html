@@ -13,10 +13,13 @@
         <a-assets>
             <img id="sky" src="/img/sky.jpg">
             <img src="/texture/road_texture/Asphalt_Rough_vizhdcz_8K_surface_ms/vizhdcz_8K_Albedo.jpg" id="road">
+            <img src="/img/scary_2.jpg" id="scary">
             <a-asset-item src="/models/door/scene.gltf" id="door"></a-asset-item>
             <a-asset-item src="/models/recent_door/scene.gltf" id="side_door"></a-asset-item>
             <a-asset-item src="/models/side_table/scene.gltf" id="table"></a-asset-item>
             <a-asset-item src="/models/jukebox/scene.gltf" id="jukebox"></a-asset-item>
+            <a-asset-item src="/models/gem/scene.gltf" id="gem"></a-asset-item>
+            <a-asset-item src="/models/pedestral/scene.gltf" id="pedestral"></a-asset-item>
         </a-assets>
 
         <!-- Portals -->
@@ -26,7 +29,7 @@
 
         <!--Camera-->
         <a-entity position="0 1.7 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation="0 0 0"
-            data-aframe-inspector-original-camera="" cursor="rayOrigin: mouse">
+            data-aframe-inspector-original-camera="">
             <a-cursor position="0 0 -0.05" scale="0.04 0.04 1" material="" raycaster="far: 2; objects: .clickable"
                 cursor="" geometry="">
             </a-cursor>
@@ -62,45 +65,47 @@
         
                         
         <!--MAIN DOOR-->
-        <a-entity id="old_door" gltf-model="#door" position="0 2.51297 -22.5" rotation="0 180 0" scale="0.01 0.012 0.002" animate=""></a-entity>
-
+        <a-entity id="axis_door" position="-0.60999 2.53283 -22.48" animation="">
+            <a-entity id="old_door" gltf-model="/models/door/scene.gltf" class="clickable" position="0.644 0 0" rotation="0 180 0" scale="0.01 0.012 0.002" animate="" animation=""></a-entity>
+            </a-entity>
+        </a-entity>    
         <!--SIDE DOORS LEFT-->
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
         
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 0" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 0" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity>
         
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 10" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 15" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 20" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
 
         <!--SIDE DOORS RIGHT-->
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity>
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity>
         
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 -20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 0" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 0" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 5" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 10" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 15" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
-        <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
+        <a-entity class="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="7.5 1.31846 20" rotation="0 0 0" scale="0.01 0.012 0.012"></a-entity> 
 
         <!--SIDE TABLE-->
         <a-entity id="side_table" gltf-model="#table" position="-1.6926 -0.11068 -18.39653" rotation="0 90 0" scale="13 10 10"></a-entity>
@@ -109,29 +114,38 @@
         <a-entity id="jukebox_music" gltf-model="#jukebox" position="1.24539 1.04655 -22.11681" rotation="" scale="0.005 0.005 0.005"></a-entity>
 
         <!--MUSIC-->
-        <a-sound src="/sound/creepy_sound_1.mp3" autoplay="true" position="1.24539 1.04655 -22.11681"></a-sound>
+        <a-sound id="jukebox_audio" src="/sound/creepy_sound_1.mp3" autoplay="true" position="1.24539 1.04655 -22.11681"></a-sound>
 
         <!--TRAIN SOUND-->
         <a-sound src="/sound/subway.mp3" autoplay="true" loop="true" volume="0.4" position="0 3 30"></a-sound>
 
-        <!--BLACK_ROOM-->
+        <!--BLACK_ROAD_BEHIND_MAIN_DOOR-->
 
-                <!--FLOOR-->
-                <a-plane color="#000000" rotation="-90 0 0" width="15" height="15" depth="15" position="0 -10 0"></a-plane>
-        
-                <!--WALLS-->
-                <a-plane color="#000000" rotation="" width="15" height="15" position="0 -6.523 -7.49291" material="" geometry="width: 15; height: 7"></a-plane>
-        
-                <a-plane color="#000000" rotation="0 -180 0" width="15" height="15" position="0 -6.523 7.49291" material="" geometry="width: 15; height: 7"></a-plane>
-                
-                <a-plane color="#000000" rotation="0 -90 0" width="15" height="15" position="7.41174 -6.523 -0.00888" material="" geometry="height: 7"></a-plane>
-        
-                <a-plane color="#000000" rotation="0 90 0" width="15" height="15" position="-7.41174 -6.523 -0.00888" material="" geometry="height: 7"></a-plane>
-        
-                <!--ROOF-->
-                <a-plane color="#000000" rotation="90 180 180" width="15" height="15" depth="15" position="0 -3.027 0"></a-plane>
-        
+        <a-plane id="black_road" width="10" position="0.04094 -0.02127 -25.418" height="1.290" material="src:#road; repeat: 4 1; opacity: 0" geometry="width: 6" rotation="-90 0 90"></a-plane>
 
+                <!--GEM-->
+                <a-entity class="light_to_gem" light="type: spot; angle: 30; color: #540769; intensity: 1000; penumbra: 1" position="0.04094 0.88198 -29" rotation="90 0 0"></a-entity>
+                <a-entity class="light_to_gem" light="type: spot; angle: 10; color: #540769; intensity: 300; penumbra: 1" position="0.04646 1.3896 -27.1712" rotation=""></a-entity>
+
+                <a-entity id="black_gem" class="clickable" gltf-model="#gem" position="0.04094 1000 -29" scale="0.001 0.001 0.001" animation="property: rotation; from: 0 0 0; to: 0 359.9 0; dur:17000; loop:true; easing: linear">
+
+                    <a-entity class="floor_light" rotation="0 0 0" light="type:  spot;  color:  #450557;  intensity:  2;  penumbra:  1; angle: 100; distance: 4; castShadow: true"></a-entity>
+                    <a-entity class="floor_light" rotation="0 90 0" light="type:  spot;  color:  #450557;  intensity:  2;  penumbra:  1; angle: 100; distance: 4; castShadow: true"></a-entity>
+                    <a-entity class="floor_light" rotation="0 180 0" light="type:  spot;  color:  #450557;  intensity:  2;  penumbra:  1;  angle:  100;  distance:  4; castShadow: true"></a-entity>
+                    <a-entity class="floor_light" rotation="0 -90 0" light="type:  spot;  color:  #450557;  intensity:  2;  penumbra:  1; angle: 100; distance: 4; castShadow: true"></a-entity>
+                    <a-entity class="top_light" rotation="90 0 0" light="type:  spot;  color:  #450557;  intensity:  1.21;  penumbra:  1; angle: 100; distance: 4; castShadow: true"></a-entity>
+                    <a-entity class="bottom_light" rotation="180 0 0" light="type:  spot;  color:  #450557;  intensity:  1.21;  penumbra:  1; angle: 100; distance: 4; castShadow: true"></a-entity>
+
+                    <a-entity class="gem_light" rotation="0 180 0" light="type:  point;  color:  #450557;  intensity:  2;  penumbra:  1;  angle:  100;  distance:  4; castShadow: true"></a-entity>
+                </a-entity>
+
+                <!--PEDESTRAL-->
+
+                <a-entity id="gem_pedestral" gltf-model="#pedestral" position="0.04094 1000 -29" scale="0.010 0.010 0.010"></a-entity>
+
+                <!--JUMPSCARE-->
+
+                <a-plane id="plane_jumpscare" src="#scary" side="back" height="5" width="5" position="0 2.5 -62.635" animation=""></a-plane>
 
     </a-scene>
 </body>

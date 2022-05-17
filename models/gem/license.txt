@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ungranned Gem
+* source:	https://sketchfab.com/3d-models/ungranned-gem-c737cef5da8b4ce18614a40d78123127
+* author:	Aki_Kato (https://sketchfab.com/Aki_Kato)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ungranned Gem" (https://sketchfab.com/3d-models/ungranned-gem-c737cef5da8b4ce18614a40d78123127) by Aki_Kato (https://sketchfab.com/Aki_Kato) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
