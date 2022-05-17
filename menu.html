@@ -5,12 +5,12 @@
     <title>Menu</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="./dist/aframe-portals.js"></script>
+    <script src="blicklight.js"></script>
 </head>
 
 <body>
     <a-scene stats>
         <a-assets>
-            <a-asset-item id="mask" src="/models/aku_aku/scene.gltf"></a-asset-item>
             <a-asset-item id="table" src="/models/side_table/scene.gltf"></a-asset-item>
             <a-asset-item id="phone" src="/models/phone/scene.gltf"></a-asset-item>
             <a-asset-item id="frame" src="/models/frame/scene.gltf"></a-asset-item>
@@ -21,7 +21,7 @@
             <img id="ceiling" src="/texture/ceiling.jpg">
             <img id="img_backroom" src="/img/backroom.png">
             <img id="img_space" src="/img/space.jpg">
-            <img id="img_backroom" src="/img/backroom.png">
+            <img id="img_station" src="/img/station.png">
         </a-assets>
         <a-entity light="type: ambient; color: #EEE; intensity: 0.2" position="-1 1 0"></a-entity>
 
@@ -37,7 +37,7 @@
         <a-entity position="">
             <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 0 0" position="-2.95 0 0"></a-entity>
             <a-entity rotation="5 0 0" position="0 1.135 0" animation="property: rotation; to: 5 360 0; loop: true; easing: linear; dur: 3000">
-                <a-entity light="type: spot; angle: 90; distance: 5; penumbra: 1" rotation="-90 0 0" position="0 -.6 0" animation="property: light.intensity; from: 1; to: 0; loop: true; easing: easeInExpo; dur:3000"></a-entity> 
+                <a-entity blicklight="" light="type: spot; angle: 90; distance: 5; penumbra: 1" rotation="-90 0 0" position="0 -.6 0"></a-entity> 
                 <a-entity gltf-model="/models/menu_lamp/scene.gltf" animation="property: rotation; to: 0 -720 0; loop: true; easing: easeInOutQuad; dur: 6000" rotation="" position="0 -0.66646 0" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-plane link="href:illusion\index.html" material="src: #img_backroom" geometry="" rotation="0 90 0"
@@ -46,7 +46,7 @@
             <a-plane link="href:space.html" material="src: #img_space" geometry="" rotation="0 0 0" position="0 0 -2.95"
                 scale="1.5 1.15 1"></a-plane>
             <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 180 0" position="2.95 0 0"></a-entity>
-            <a-plane link="href:illusion\index.html" material="src: #img_backroom" geometry="" rotation="0 -90 0"
+            <a-plane link="href:train\index.html" material="src: #img_station" geometry="" rotation="0 -90 0"
                 position="2.95 0 0" scale="1.5 1.15 1"></a-plane>
             <a-plane material="src: #wall; repeat: 4 2; normalMap: #wall_normal" geometry="" position="-3 0 0"
                 rotation="0 90 0" scale="6 2 1"></a-plane>
