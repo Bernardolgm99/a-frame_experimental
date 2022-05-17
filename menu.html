@@ -23,6 +23,10 @@
             <img id="img_space" src="/img/space.jpg">
             <img id="img_station" src="/img/station.png">
             <audio id="buzz" src="/sound/light_hum.mp3" preload="auto">
+            <img id="blood_hand" src="/texture/blood_hand.png">
+            <img id="blood_smear" src="/texture/blood_smear.png">
+            <img id="blood_drip" src="/texture/blood_drip.png">
+            <img id="blood_smear2" src="/texture/blood_smear2.png">
         </a-assets>
         <a-entity light="type: ambient; color: #EEE; intensity: 0.2" position="-1 1 0"></a-entity>
 
@@ -60,6 +64,19 @@
             <a-plane material="src: #floor; repeat: 6 6" geometry="" rotation="-90 0 0" position="0 -1 0" scale="6 6 1">
             </a-plane>
             <a-plane material="src: #ceiling" geometry="" scale="6 6 1" rotation="90 0 0" position="0 1 0"></a-plane>
+            <!--blood-->
+            <a-plane src="#blood_hand" transparent="true" scale="0.25 0.25 0.25" rotation="0 -90 0" position="2.99 0 1"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="0.4 0.4 0.4" rotation="0 -90 110" position="2.99 -0.5 1"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="1 1 1" rotation="-90 0 27" position="2.7 -0.999 1.1"></a-plane>
+            <a-plane src="#blood_smear2" transparent="true" scale="0.4 0.4 0.4" rotation="-90 0 -16" position="2.2 -0.99 0.86"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="1 1 1" rotation="-90 0 0" position="1.4 -0.999 0.48"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="0.4 0.4 0.4" rotation="-90 0 0" position="0.765 -0.99 0.26"></a-plane>
+            <a-plane src="#blood_smear2" transparent="true" scale="0.4 0.4 0.4" rotation="0 180 0" position="0.37 0 2.999"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="0.6 0.6 0.6" rotation="0 180 90" position="0.4 -0.5 2.999"></a-plane>
+            <a-plane src="#blood_smear2" transparent="true" scale="0.3 0.3 0.3" rotation="0 180 -16" position="-2.33 0 2.999"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="0.6 0.6 0.6" rotation="0 90 90" position="-2.999 0.33 1"></a-plane>
+            <a-plane src="#blood_smear" transparent="true" scale="0.4 0.4 0.4" rotation="0 180 0" position="-2.999 -0.27 -2.71"></a-plane>
+            <a-plane src="#blood_drip" transparent="true" scale="0.4 0.4 0.4" rotation="0 0 0" position="-0.76 -0.89 -2.999"></a-plane>
         </a-entity>
 
         <!-- Phone -->
@@ -74,7 +91,7 @@
 
         <!-- Credit -->
         <a-entity
-            text="value: <PROJETO CPM> Bernardo Macedo Eduardo Alves Gaspar Nariz; color: #ffffff; wrapCount: 15; lineHeight: 100"
+            text="value: <PROJETO CPM> Bernardo Macedo Eduardo Alves Gaspar Vieira; color: #ffffff; wrapCount: 15; lineHeight: 100"
             rotation="0 180 0" position="-0.5 0 3" scale=""></a-entity>
         <a-entity
             text="value: <References> https://aframe.io/blog/aframe-v1.1.0/ https://github.com/ryota-mitarai/aframe-portals ; color: #ffffff; lineHeight: 100"

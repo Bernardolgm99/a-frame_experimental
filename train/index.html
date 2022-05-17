@@ -30,6 +30,9 @@
     <img id="graf4" src="/texture/graf4.png">
     <img id="graf5" src="/texture/graf5.png">
     <img id="map" src="/texture/map.png">
+    <img id="blood_hand" src="/texture/blood_hand.png">
+    <img id="blood_smear" src="/texture/blood_smear.png">
+    <audio id="buzz" src="/sound/light_hum.mp3" preload="auto"></audio>
   </a-models>
     
   <!--Camera-->
@@ -86,8 +89,8 @@
       <!--lues metro-->
       <a-entity light="type: spot; angle: 35; distance: 6; intensity: 3; penumbra: 1" position="-0.875 1.2 -36.461" rotation="44.841 180 0"></a-entity>
       <a-entity light="type: spot; angle: 35; distance: 6; intensity: 3; penumbra: 1" position="0.875 1.2 -36.461" rotation="44.841 180 0"></a-entity>
-      <a-entity light="type: spot; angle: 60; distance: 30; intensity: 5; penumbra: 1" position="0.91 2 -35.3" rotation="-50 0 0"></a-entity>
-      <a-entity light="type: spot; angle: 60; distance: 30; intensity: 5; penumbra: 1" position="-0.91 2 -35.3" rotation="-50 0 0"></a-entity>
+      <a-entity light="type: spot; angle: 60; distance: 30; intensity: 5; penumbra: 1" position="0.91 2 -38" rotation="-50 0 0"></a-entity>
+      <a-entity light="type: spot; angle: 60; distance: 30; intensity: 5; penumbra: 1" position="-0.91 2 -38" rotation="-50 0 0"></a-entity>
     </a-entity>
     <a-sound src="/sound/subway.mp3" autoplay="true" loop="true" volume="5"></a-sound>
   </a-entity>
@@ -119,9 +122,7 @@
   <!--LAMP-->
   <a-entity gltf-model="#lamp" rotation="0 90 0" scale="0.01 0.025 0.02" position="-5.7 2.3 -0.278"></a-entity>
   <a-entity gltf-model="#lamp" rotation="0 -90 0" scale="0.01 0.025 0.02" position="-6 2.3 -0.278"></a-entity>
-  <a-entity gltf-model="#lamp" rotation="0 -90 0" scale="0.01 0.025 0.02" position="5.7 2.3 -0.278">
-    <!--insert sound-->
-  </a-entity>
+  <a-entity gltf-model="#lamp" rotation="0 -90 0" scale="0.01 0.025 0.02" position="5.7 2.3 -0.278" sound="src:#buzz; autoplay: true; loop: true"></a-entity>
   <a-entity gltf-model="#lamp" rotation="0 90 0" scale="0.01 0.025 0.02" position="6 2.3 -0.278"></a-entity>
 
   
@@ -143,6 +144,9 @@
   <a-plane src="#graf5" transparent="true" scale="3.5 1.5 1" position='-3.3 4.316 3.99' rotation= '0 180 -8' roughness="1"></a-plane>
   <a-plane src="#graf4" transparent="true" scale="2.5 2 1" position='-8.8 3.3 3.99' rotation= '0 180 10' roughness="1"></a-plane>
 
+  <!--blood-->
+  <a-plane src="#blood_hand" transparent="true" scale="0.25 0.25 0.25" rotation="0 180 -16" position='-3.75 0.945 3.97'></a-plane>
+  <a-plane src="#blood_smear" transparent="true" scale="0.4 0.4 0.4" rotation="0 180 90" position='-3.665 0.7 3.965'></a-plane>
   </a-scene>
 </body>
 
