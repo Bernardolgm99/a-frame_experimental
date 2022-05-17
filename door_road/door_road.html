@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <!--<script src="/illusion/dist/aframe-portals.js"></script>-->
     <title>Yau</title>
 </head>
 <body>
@@ -18,9 +19,14 @@
             <a-asset-item src="/models/jukebox/scene.gltf" id="jukebox"></a-asset-item>
         </a-assets>
 
+        <!-- Portals -->
+        <a-entity id="portal7" portal="destination: #portal8; maxRecursion: 1" position="5 0 0" rotation="">
+        </a-entity>
+        <a-entity id="portal8" portal="destination: #portal7" position="-5 0 0"></a-entity>
+
         <!--Camera-->
         <a-entity position="0 1.7 0" camera="" wasd-controls="acceleration: 10" look-controls="" rotation="0 0 0"
-            data-aframe-inspector-original-camera="">
+            data-aframe-inspector-original-camera="" cursor="rayOrigin: mouse">
             <a-cursor position="0 0 -0.05" scale="0.04 0.04 1" material="" raycaster="far: 2; objects: .clickable"
                 cursor="" geometry="">
             </a-cursor>
@@ -56,7 +62,7 @@
         
                         
         <!--MAIN DOOR-->
-        <a-entity id="old_door" gltf-model="#door" position="0 2.51297 -22.5" rotation="0 180 0" scale="0.01 0.012 0.002"></a-entity>
+        <a-entity id="old_door" gltf-model="#door" position="0 2.51297 -22.5" rotation="0 180 0" scale="0.01 0.012 0.002" animate=""></a-entity>
 
         <!--SIDE DOORS LEFT-->
         <a-entity id="recent_door" gltf-model="#side_door" class="clickable" link="href:/train/index.html" position="-7.5 1.31846 -5" rotation="0 180 0" scale="0.01 0.012 0.012"></a-entity> 
@@ -108,7 +114,26 @@
         <!--TRAIN SOUND-->
         <a-sound src="/sound/subway.mp3" autoplay="true" loop="true" volume="0.4" position="0 3 30"></a-sound>
 
+        <!--BLACK_ROOM-->
+
+                <!--FLOOR-->
+                <a-plane color="#000000" rotation="-90 0 0" width="15" height="15" depth="15" position="0 -10 0"></a-plane>
+        
+                <!--WALLS-->
+                <a-plane color="#000000" rotation="" width="15" height="15" position="0 -6.523 -7.49291" material="" geometry="width: 15; height: 7"></a-plane>
+        
+                <a-plane color="#000000" rotation="0 -180 0" width="15" height="15" position="0 -6.523 7.49291" material="" geometry="width: 15; height: 7"></a-plane>
+                
+                <a-plane color="#000000" rotation="0 -90 0" width="15" height="15" position="7.41174 -6.523 -0.00888" material="" geometry="height: 7"></a-plane>
+        
+                <a-plane color="#000000" rotation="0 90 0" width="15" height="15" position="-7.41174 -6.523 -0.00888" material="" geometry="height: 7"></a-plane>
+        
+                <!--ROOF-->
+                <a-plane color="#000000" rotation="90 180 180" width="15" height="15" depth="15" position="0 -3.027 0"></a-plane>
+        
+
+
     </a-scene>
 </body>
-<script src="index.js"></script>
+<script src="door_road.js"></script>
 </html>
