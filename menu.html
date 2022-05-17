@@ -22,6 +22,7 @@
             <img id="img_backroom" src="/img/backroom.png">
             <img id="img_space" src="/img/space.jpg">
             <img id="img_station" src="/img/station.png">
+            <audio id="buzz" src="/sound/light_hum.mp3" preload="auto">
         </a-assets>
         <a-entity light="type: ambient; color: #EEE; intensity: 0.2" position="-1 1 0"></a-entity>
 
@@ -37,7 +38,7 @@
         <a-entity position="">
             <a-entity gltf-model="/models/frame/scene.gltf" rotation="90 0 0" position="-2.95 0 0"></a-entity>
             <a-entity rotation="5 0 0" position="0 1.135 0" animation="property: rotation; to: 5 360 0; loop: true; easing: linear; dur: 3000">
-                <a-entity blicklight="" light="type: spot; angle: 90; distance: 5; penumbra: 1" rotation="-90 0 0" position="0 -.6 0"></a-entity> 
+                <a-entity blicklight="vol: 0.6" sound="src:#buzz; autoplay: true; loop: true" light="type: spot; angle: 90; distance: 5; penumbra: 1" rotation="-90 0 0" position="0 -.6 0"></a-entity> 
                 <a-entity gltf-model="/models/menu_lamp/scene.gltf" animation="property: rotation; to: 0 -720 0; loop: true; easing: easeInOutQuad; dur: 6000" rotation="" position="0 -0.66646 0" scale="0.15 0.15 0.15"></a-entity>
             </a-entity>
             <a-plane link="href:illusion\index.html" material="src: #img_backroom" geometry="" rotation="0 90 0"
