@@ -24,9 +24,9 @@ door.addEventListener('click', () => {
     
 })
 
-gem.addEventListener('click', () => {delay(scary_img, soundScare, phone)})
+gem.addEventListener('click', () => {delay(scary_img, soundScare, phone, door)})
 
-async function delay(scary_img, soundScare, phone) {
+async function delay(scary_img, soundScare, phone, door){
     
     scary_img.setAttribute("rotation", "0 -180 0")
     scary_img.setAttribute("animation", "property: position; from: 0 2.5 -35; to: 0 2.5 100; dur:1500")
@@ -38,12 +38,13 @@ async function delay(scary_img, soundScare, phone) {
 
     await sleep(1500)
 
-
     soundScare.setAttribute("volume", "0")
+
+    door.setAttribute("animation", "property: rotation; from: 0 90 0; to: 0 0 0; dur: 1500")
+
 
 }
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  
 }
